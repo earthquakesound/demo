@@ -1,0 +1,47 @@
+<section id="techdesc">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Technical Description</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                    <h3>Data Preprocess</h3>
+                    <p class="text-muted">
+                        공공 데이터포털에서 10년간의 서울과 포항의 지진 데이터 수집하였습니다.    
+                        동일하지 않은 시간에 일어난 각각의 도시의 지진 데이터들을 같은 시간 선상에서 일어나는 이벤트로 나열하기 위해 230개의 데이터를 1, 4.8 35.9 1; 다음과 같은 형태로 전처리 하였고 
+                        이는 시간의 역할을 해줄 순서, 진도, 위도 순으로 나열되어 있습니다. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-headphones wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                    <h3>Data Sonification</h3>
+                    <p class="text-muted">
+                        동일한 시간대에 지진이 일어나지 않았거나 한 도시에서만 지진이 일어났다면 그때는 사운드가 들리지 않거나 한 채널의 사운드만 들리게 됩니다. 
+                        패치에서는 이러한 데이터가 coll 함수에 저장되고 이것들이 1초마다 다음 값으로 넘어가며 FM-Synth에서 진도는, 템포, 음고, 변조 비율에 변수로 위도는 모듈레이션 인덱스 값으로 적용됩니다. 
+                        리듬은 랜덤하게 설정되어 있으며 서울과 포항의 채널이 분리되어 있습니다. 
+                        이는 추후 오프라인 설치 시 다른 위치에 설치될 각각의 스피커의 설치를 용이하게 하여 두 데이터에 따른 사운드의 차이를 극명하게 느낄 수 있도록 설계되었습니다. 
+                        웹상으로 전시 구현 시 헤드폰으로 감상할 경우에도 동일하게 이 차이를 느낄 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-eye wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>Visualization</h3>
+                    <p class="text-muted">
+                        비주얼의 경우 앞서 데이터에 따른 사운드의 인터랙션과 거의 동일하게 진행되며 사운드와 동일하게 데이터 값이 없을 경우와 한쪽 데이터만 있을 경우 이미지가 사라지나 하나의 축만 활성화됩니다. 진도 값이 서울은 가로축, 포항은 세로축의 바에 연동되어 있습니다. 또한 생성되는 사운드는 플리커 효과에 영향을 줘서 영상에서 지속적으로 번쩍이는 듯한 이미지를 만들어 냅니다. 
+                        상대적으로 데이터가 많은 세로축이 반응 빈도가 더 높으며 진도가 더 높을 수록 각 축에 해당하는 바가 좌우 상하로 더 넓어지는 이미지를 만듭니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
